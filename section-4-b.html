@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        const text = () => {
+            document.getElementById('paragraph').innerHTML = `<p>new text</p>`;
+        }
+        const color = () => {
+            document.getElementById('color').style.backgroundColor = 'blue';
+        }
+        const remove = () => {
+            document.getElementById('remove').style.display = 'none';
+        }
+        const insert = () => {
+            document.getElementById('insert').innerHTML =
+                `
+            <div style="background-color: lightblue; border: 1px solid violet;">
+              <h3 style="color: blueviolet;">Heading</h3>
+              <p style="color:white; background-color:blueviolet; width: 25%">B.Sc. in Computer Science & Engineering (CSE)</p>
+              <input type="submit" value="click"><br><br>
+            </div>
+            `;
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 id="paragraph">old text</h3>
+    <button onclick="text()">click to change text</button><br>
+    <h3 id="color">color changed</h3>
+    <button onclick="color()">click to change color</button><br><br>
+    <h3 id="remove">this text is about to disappear</h3>
+    <button onclick="remove()">click to remove text</button><br><br>
+    <div id="insert"></div><br>
+    <button onmouseover="insert()">mouseover this button</button>
+</body>
+
+</html>

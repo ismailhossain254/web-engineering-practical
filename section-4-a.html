@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function validateInput() {
+            let name = document.forms["myForm"]["name"].value;
+            let address = document.forms["myForm"]["address"].value;
+            let email = document.forms["myForm"]["email"].value;
+            let gender = document.forms["myForm"]["gender"].value;
+            let number = document.forms["myForm"]["number"].value;
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            else if (address == "") {
+                alert("Address must be filled out");
+                return false;
+            }
+            else if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+            else if (gender == "") {
+                alert("Gender must be filled out");
+                return false;
+            }
+            else if (number.length !== 11) {
+                alert("Number must be 11 digit");
+                return false;
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateInput()" method="post">
+        Name: <input name="name" type="text"><br><br>
+        Address: <input name="address" type="text"><br><br>
+        Email: <input type="email" name="email" id=""><br><br>
+        Gender: <input type="text" name="gender"><br><br>
+        Mobile Number: <input type="number" name="number" id=""><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
